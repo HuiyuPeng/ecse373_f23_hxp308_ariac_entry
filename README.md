@@ -15,4 +15,3 @@
 `roslaunch ecse_373_ariac ecse_373_ariac.launch`
 
 
-# ecse373_f23_hxp308_ariac_entry
