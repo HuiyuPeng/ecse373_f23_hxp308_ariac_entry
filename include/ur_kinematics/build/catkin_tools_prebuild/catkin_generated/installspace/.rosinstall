@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/leegs/universal_robot/ur_kinematics/install/setup.sh
