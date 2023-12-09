@@ -11,6 +11,11 @@ find_package(catkin REQUIRED COMPONENTS
   ecse_373_ariac
   roscpp
   rviz
+  actionlib
+  ik_service
+  ur_kinematics
+  geometry_msgs
+  ik_service
 )
 
 ## System dependencies are found with CMake's conventions
@@ -105,7 +110,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ariac_entry
-#  CATKIN_DEPENDS ecse_373_ariac roscpp rviz
+#  CATKIN_DEPENDS ecse_373_ariac roscpp rviz std_msgs ur_kinematics geometry_msgs ik_service
 #  DEPENDS system_lib
 )
 
@@ -122,7 +127,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/ariac_entry.cpp
+#   src/${PROJECT_NAME}/ariac_entry_node.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -143,11 +148,17 @@ add_executable(${PROJECT_NAME}_node src/ariac_entry_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
+# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
+# target_link_libraries(${PROJECT_NAME}_node
+#   ${catkin_LIBRARIES}
+# )
+
 target_link_libraries(${PROJECT_NAME}_node
-    ${catkin_LIBRARIES}
+  ${catkin_LIBRARIES}
+  ur10_kin
 )
 
 #############
@@ -197,7 +208,7 @@ target_link_libraries(${PROJECT_NAME}_node
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_ariac_entry.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_ariac_entry_nodes.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

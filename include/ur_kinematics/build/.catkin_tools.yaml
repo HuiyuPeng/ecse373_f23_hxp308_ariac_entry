@@ -1,6 +1,0 @@
-devel_space: /home/leegs/universal_robot/ur_kinematics/devel
-install: false
-install_space: /home/leegs/universal_robot/ur_kinematics/install
-profile: default
-source_space: /home/leegs/universal_robot/ur_kinematics/src
-workspace: /home/leegs/universal_robot/ur_kinematics
