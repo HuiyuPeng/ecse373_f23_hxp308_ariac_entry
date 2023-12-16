@@ -156,10 +156,7 @@ add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catk
 #   ${catkin_LIBRARIES}
 # )
 
-target_link_libraries(${PROJECT_NAME}_node
-  ${catkin_LIBRARIES}
-  ur10_kin
-)
+target_link_libraries(ariac_entry_node ${catkin_LIBRARIES})
 
 #############
 ## Install ##

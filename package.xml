@@ -19,7 +19,7 @@
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/cwru_ecse_373_submission</url> -->
+  <!-- <url type="website">http://wiki.ros.org/ariac_entry</url> -->
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
@@ -57,13 +57,13 @@
   <build_depend>roscpp</build_depend>
   <build_depend>rviz</build_depend>
   <build_depend>actionlib</build_depend>
-  <build_depend>actionlib_msg</build_depend>
+  
 
   <build_export_depend>ecse_373_ariac</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
   <build_export_depend>geometry_msgs</build_export_depend>
   <build_export_depend>ik_service</build_export_depend>
-  <build_depend>ur_kinematics</build_export_depend>
+  <build_export_depend>ur_kinematics</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>rviz</build_export_depend>
   <build_export_depend>actionlib</build_export_depend>
